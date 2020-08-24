@@ -1,0 +1,66 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8bdf9f2382.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SkyLab Panel</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-user-circle"></i> USER </a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+        <ul class="nav nav-pills nav-stacked" style="border-right:1px solid black">
+            <!--<li class="nav-header"></li>--> 
+            <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <h4> Hosting Control </h4>
+            <li><a href="#"> <i class="fas fa-users"></i>       User Managment      </a></li>
+            <li><a href="#"> <i class="fas fa-cubes"></i>       Package Managment   </a></li>
+            <li><a href="#"> <i class="fas fa-at"></i>          Domain Managment    </a></li>
+            <li><a href="#"> <i class="fas fa-database"></i>    Database Managment  </a></li>
+            <li><a href="#"> <i class="fas fa-inbox"></i>       Email Managment     </a></li>
+            <li><a href="#"> <i class="far fa-file"></i>        FTP Managment       </a></li>
+            <li><a href="#"> <i class="far fa-file"></i>        DNS Managment       </a></li>
+            <li><a href="#"> <i class="fas fa-lock"></i>        SSL Managment       </a></li>
+            <li><a href="#"> <i class="far fa-save"></i>        Backup              </a></li>
+            <h4> Server Settings </h4>
+           
+
+    
+        </ul>
+    </div>
+
+    <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
+        
+    
+        <a href="#"><strong><span class="fa fa-dashboard"></span> My Dashboard </strong></a>
+        <div style="float: right;">
+            {% for category, message in get_flashed_messages(with_categories=True) %}
+            <span class="alert alert-{{category}}">Error: {{ message }}</span>
+            {% endfor %}
+        </div>
+    
+        <hr>
+    </div>
+
+    <main>
+        {% block body %} {% endblock %}
+    </main>
+    
+</body>
+</html>
+
+
