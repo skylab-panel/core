@@ -39,12 +39,15 @@ subprocess.run(['bash','-c', 'apt-get install phpmyadmin letsencrypt -y'])
 mysql_config = open("/etc/mysql/my.cnf", "a")
 mysql_config.write("[mysqld]\n")
 mysql_config.write("default_authentication_plugin=mysql_native_password\n")
+mysql_config.close()
+
 # Set Mysql Root Password #
 print ("You need to secure my sql")
 subprocess.run(['bash','-c', 'mysql_secure_connection'])
 # Config File #
 subprocess.run(['bash','-c', 'cd / & mkdir skylabpanel'])
 main_config = open("/skylabpanel/main.txt", "w")
+
 # Create skylabpanel Database #
 print ("\nSkyLab Panel needs to set its configration file. Follow on Screen Instructions! \n")
 time.sleep(2)
@@ -54,6 +57,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user=mysqlrootusername,
     password=mysqlrootpassword,
+    auth_plugin='mysql_native_password',
 )
 mycursor = mydb.cursor()
 
@@ -65,7 +69,8 @@ mydb = mysql.connector.connect(
     host="localhost",
     user=mysqlrootusername,
     password=mysqlrootpassword,
-    database="skylabpanel"
+    database="skylabpanel",
+    auth_plugin='mysql_native_password',
 )
 mycursor.execute("""CREATE TABLE tbl_users (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
