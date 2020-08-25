@@ -38,7 +38,9 @@ subprocess.run(['bash','-c', 'sudo apt-get install phpmyadmin letsencrypt -y'])
 # Config File #
 subprocess.run(['bash','-c', 'cd / & mkdir skylabpanel'])
 main_config = open("/skylabpanel/main.txt", "w")
-
+mysql_config = open("/etc/mysql/my.cnf", "a")
+mysql_config.write("[mysqld]\n")
+mysql_config.write("default_authentication_plugin=mysql_native_password")
 # Create skylabpanel Database #
 print ("\nSkyLab Panel needs to set its configration file. Follow on Screen Instructions! \n")
 time.sleep(2)
@@ -78,8 +80,8 @@ username = input("Please Enter a Username(admin and root are not recommended!): 
 password = input("Please Enter a Password: ")
 email = input("Please Enter an Email Adress: ")
 
-main_config.write(username)
-main_config.write(password)
+main_config.write(username+"\n")
+main_config.write(password+"\n")
 
 password = password.encode('utf-8')
 password = bcrypt.hashpw(password, bcrypt.gensalt())
