@@ -1,0 +1,16 @@
+CRITICAL:root:Conection to Database Failed!
+CRITICAL:root:Conection to Database Failed!
+CRITICAL 08/25/2020 08:31:08 PM Conection to Database Failed!
+CRITICAL - 08/25/2020 08:32:25 PM - Conection to Database Failed!
+08/25/2020 20:36:11  CRITICAL Conection to Database Failed!
+08/25 20:36:40  CRITICAL Conection to Database Failed!
+08/25 20:37:21 CRITICAL Conection to Database Failed!
+08/25 20:37:25 CRITICAL Conection to Database Failed!
+08/25 20:40:37 - CRITICAL - Main - Main Conection to Database Failed! - 
+08/25 20:47:57 - CRITICAL - Main - Main Conection to Database Failed!
+08/25 20:49:02 - CRITICAL - Main - Main Conection to Database Failed!
+08/25 20:49:32 - CRITICAL - Main - Main Conection to Database Failed!
+08/25 20:50:27 - CRITICAL - Main - Main Conection to Database Failed! {e}
+08/25 20:51:15 - CRITICAL - Main - Main Conection to Database Failed! Access denied for user 'lines[0]'@'localhost' (using password: YES)
+08/25 20:51:38 - CRITICAL - Main - Main Conection to Database Failed! Plugin caching_sha2_password could not be loaded: /usr/lib/x86_64-linux-gnu/mariadb19/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory
+08/25 20:55:42 - CRITICAL - Main - Main Conection to Database Failed! Plugin caching_sha2_password could not be loaded: mysql_native_password/caching_sha2_password.so: cannot open shared object file: No such file or directory

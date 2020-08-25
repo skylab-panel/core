@@ -1,17 +1,30 @@
 from flask import Flask, request, render_template, session, redirect, url_for, abort, flash
-import mysql.connector
+import mariadb
+import bcrypt
+import logging
+import sys
 app = Flask(__name__)
 
-mian_config = open('/skylabpanel/main.conf')
+mian_config = open('/skylabpanel/main.conf', 'r')
 lines = mian_config.readlines()
-mydb = mysql.connector.connect(
-  host="localhost",
-  auth_plugin="mysql_native_password",
-  user=lines[0],
-  password=lines[1],
-  database="skylabpanel"
-)
-mycursor = mydb.cursor()
+print (lines)
+
+logging.basicConfig(filename='example.log',level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%m/%d %H:%M:%S')
+# Database Conection#
+try:
+    conn = mariadb.connect(
+        user=lines[0],
+        password=lines[1],
+        host="localhost",
+        port=3306,
+    )
+except mariadb.Error as e:
+    logging.critical(f"Main - Main Conection to Database Failed! {e}")
+    sys.exit(1)
+else:
+    cur = conn.cursor()
+    logging.info("Main - Main Conection to Database Successful!")
+
 @app.route('/')
 def basepage():
     if 'username' in session:
@@ -33,10 +46,9 @@ def login():
     password = password.encode('utf-8')
     ## More Data Validation and Output ##
     if len(username) >= 3 and len(password) >= 6:
-        sql = "SELECT UserName, Password FROM tbl_users WHERE UserName = %s"
-        val = (username, )
-        mycursor.execute(sql, val)
-        myresult = mycursor.fetchall()
+        cur.execute("USE skylabpanel")
+        cur.execute("SELECT (username, password) FROM tbl_users WHERE UserName = ?", (username))
+        myresult = cur.fetchall()
         for row in myresult:
             db_username = row[0]
             db_password = row[1].encode('utf-8')
@@ -49,6 +61,7 @@ def login():
             return render_template('account/login.html', notifications_type="info", message="Hello World")
     else:
         return "<p>The data you entered was not valid<p>"
+
 if __name__ == '__main__':
     app.secret_key = "Uxb&2e2e8=DjYtLWBAmb"  
     app.run(use_reloader=True, debug=True, host='0.0.0.0')
