@@ -9,7 +9,7 @@ import bcrypt
 if not os.geteuid()==0:
     sys.exit('This script must be run as root!')
 
-
+os.chdir("/")
 print ("""
   _____  _            _             _       _____                     _ 
  / ____|| |          | |           | |     |  __ \                   | |
