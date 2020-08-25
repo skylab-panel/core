@@ -35,15 +35,16 @@ subprocess.run(['bash','-c', 'apt-get install apache2 mysql-server php libapache
 print ("Installing Php my Admin, Email Dns and others #")
 subprocess.run(['bash','-c', 'apt-get install phpmyadmin letsencrypt -y'])
 
+# Mysql Config
+mysql_config = open("/etc/mysql/my.cnf", "a")
+mysql_config.write("[mysqld]\n")
+mysql_config.write("default_authentication_plugin=mysql_native_password\n")
 # Set Mysql Root Password #
 print ("You need to secure my sql")
 subprocess.run(['bash','-c', 'mysql_secure_connection'])
 # Config File #
 subprocess.run(['bash','-c', 'cd / & mkdir skylabpanel'])
 main_config = open("/skylabpanel/main.txt", "w")
-mysql_config = open("/etc/mysql/my.cnf", "a")
-mysql_config.write("[mysqld]\n")
-mysql_config.write("default_authentication_plugin=mysql_native_password")
 # Create skylabpanel Database #
 print ("\nSkyLab Panel needs to set its configration file. Follow on Screen Instructions! \n")
 time.sleep(2)
