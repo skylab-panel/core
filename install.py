@@ -29,12 +29,15 @@ subprocess.run(['bash','-c', 'apt-get update -y & apt-get upgrade -y'])
 
 # Install Lamp #
 print ("Installing Lamp")
-subprocess.run(['bash','-c', 'sudo apt-get install apache2 mysql-server php libapache2-mod-php php-mysql -y'])
+subprocess.run(['bash','-c', 'apt-get install apache2 mysql-server php libapache2-mod-php php-mysql -y'])
 
 # Install Php my Admin, Email Dns and others #
 print ("Installing Php my Admin, Email Dns and others #")
-subprocess.run(['bash','-c', 'sudo apt-get install phpmyadmin letsencrypt -y'])
+subprocess.run(['bash','-c', 'apt-get install phpmyadmin letsencrypt -y'])
 
+# Set Mysql Root Password #
+print ("You need to secure my sql")
+subprocess.run(['bash','-c', 'mysql_secure_connection'])
 # Config File #
 subprocess.run(['bash','-c', 'cd / & mkdir skylabpanel'])
 main_config = open("/skylabpanel/main.txt", "w")
