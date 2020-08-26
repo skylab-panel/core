@@ -63,7 +63,7 @@ def login():
     
     password = password.encode('utf-8')
     ## More Data Validation and Output ##
-    if len(username) >= 3 and len(password) >= 6:
+    if len(username) >= 3: # and len(password) >= 6:
         cur.execute("USE skylabpanel")
         cur.execute("SELECT username, password, account_type FROM tbl_users WHERE username = ? ", (username, ))
         myresult = cur.fetchall()
@@ -77,7 +77,7 @@ def login():
             session['username'] = username
             session['account_type'] = db_account_type
             flash ("You are Logged in!", "info")
-            return redirect(url_for('home'))
+            return redirect(url_for('basepage'))
         else:
             return "<p>The data you entered was not valid<p>"
     else:
@@ -89,7 +89,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for)('home')
+    return redirect(url_for('basepage'))
 
 ######################
 ### User Managment ###
@@ -97,7 +97,7 @@ def logout():
 @app.route('/client/user-managment/users')
 def user_managment():
     cur.execute("USE skylabpanel")
-    cur.execute("SELECT id, username, domains, package, account_type FROM tbl_users WHERE account_type = user, reseller")
+    cur.execute("SELECT id, username, domains, package, account_type FROM tbl_users WHERE account_type != admin")
     myresult = cur.fetchall()
     num_records = len(myresult)
     all_customers = []
