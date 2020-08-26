@@ -42,7 +42,7 @@ else:
 ### Main Page ###
 #################
 @app.route('/')
-def basepage():
+def home_page():
     if 'username' in session:
         return render_template('base.html')
     else:
@@ -77,7 +77,7 @@ def login():
             session['username'] = username
             session['account_type'] = db_account_type
             flash ("You are Logged in!", "info")
-            return redirect(url_for('basepage'))
+            return redirect(url_for('home_page'))
         else:
             return "<p>The data you entered was not valid<p>"
     else:
@@ -89,15 +89,15 @@ def login():
 @app.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('basepage'))
+    return redirect(url_for('home_page'))
 
 ######################
 ### User Managment ###
 #######################
-@app.route('/client/user-managment/users')
+@app.route('/client/user-management/users')
 def user_managment():
     cur.execute("USE skylabpanel")
-    cur.execute("SELECT id, username, domains, package, account_type FROM tbl_users WHERE account_type != admin")
+    cur.execute("SELECT id, username, domains, package, account_type FROM tbl_users WHERE account_type != ?", ('admin', ))
     myresult = cur.fetchall()
     num_records = len(myresult)
     all_customers = []
@@ -105,7 +105,7 @@ def user_managment():
         customer = [row[0], row[1], row[2], row[3], row[4]]
         all_customers.append(customer)
         customer = []
-    render_template('/client/user-managment/users.html', results=all_customers)
+    return render_template('/client/user-management/users.html', results=all_customers)
 
 ###########
 ### Run ###

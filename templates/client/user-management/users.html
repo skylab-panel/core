@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+<table class="table table-striped" style="width: 100%;">
+    <thead>
+        <tr>
+            <th> User ID </th>
+            <th> Username </th>
+            <th> Domains </th>
+            <th> Package </th>
+            <th> Account Type </th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for result in results %}
+        <tr>
+        {% for elem in result %}
+            <td>{{elem}}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="/client/user-management/add-user.html" class="btn btn-default" role="button"> Add Users </a>
+<a href="/client/user-management/edit-user.html" class="btn btn-default" role="button"> Edit Users </a>
+<a href="/client/user-management/remove-user.html" class="btn btn-default" role="button"> Remove Users</a>
+{% endblock %}
