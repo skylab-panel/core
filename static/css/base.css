@@ -1,27 +1,33 @@
-.navbar-inverse
-{
-    background:#00796B;
-    border-bottom-color: #004D40;
+
+nav.navbar{
+    background-color: #00796B
 }
-.navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>.dropdown>a .caret
-{
-    color: #fff;
+a.nav-link-navbar, a.navbar-brand{
+    color: white;
+    padding: 10px;
 }
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus,
-.navbar-nav>li>.dropdown-menu
-{
-    background:#4DB6AC;
+a.nav-link-sidebar, a.nav-link-bar{
+    color: tomato;
 }
-.nav-pills>li>a,
-{
-    color: #303F9F;
+.nav-item-sidebar {
+    padding-left: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 18px;
 }
 
-.nav>li>a:hover, .nav>li>a:focus
+a.nav-item-bar
 {
-    background-color: #EEEEEE;
+    font-size: 18px;
+    padding: 10px;
 }
-
+main{
+    padding: 10px;
+}
+.btn-default, a.btn-default{
+    background-color: #00796B;
+    color: white;
+}
 .alert {
     padding: 12px;
     border-radius: 3px;
