@@ -1234,3 +1234,25 @@ CRITICAL - 08/25/2020 08:32:25 PM - Conection to Database Failed!
 08/26 14:58:08 - INFO - 88.97.104.116 - - [26/Aug/2020 14:58:08] "[37mGET /client/user-management/users HTTP/1.1[0m" 200 -
 08/26 14:58:10 - INFO - 88.97.104.116 - - [26/Aug/2020 14:58:10] "[32mGET /logout HTTP/1.1[0m" 302 -
 08/26 14:58:10 - INFO - 88.97.104.116 - - [26/Aug/2020 14:58:10] "[37mGET / HTTP/1.1[0m" 200 -
+08/31 18:50:10 - INFO - Main - Main Conection to Database Successful!
+08/31 18:50:10 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+08/31 18:50:10 - INFO -  * Restarting with stat
+08/31 18:50:10 - INFO - Main - Main Conection to Database Successful!
+08/31 18:50:10 - WARNING -  * Debugger is active!
+08/31 18:50:10 - INFO -  * Debugger PIN: 104-720-273
+08/31 18:50:17 - INFO - 88.97.104.116 - - [31/Aug/2020 18:50:17] "[37mGET / HTTP/1.1[0m" 200 -
+08/31 18:50:17 - INFO - 88.97.104.116 - - [31/Aug/2020 18:50:17] "[37mGET /static/css/base.css HTTP/1.1[0m" 200 -
+08/31 18:50:18 - INFO - 88.97.104.116 - - [31/Aug/2020 18:50:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+08/31 18:50:24 - INFO - 88.97.104.116 - - [31/Aug/2020 18:50:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+08/31 18:50:24 - INFO - 88.97.104.116 - - [31/Aug/2020 18:50:24] "[37mGET / HTTP/1.1[0m" 200 -
+08/31 18:50:25 - INFO - 88.97.104.116 - - [31/Aug/2020 18:50:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+08/31 18:51:01 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:01] "[37mGET /client/user-management/users HTTP/1.1[0m" 200 -
+08/31 18:51:02 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:02] "[33mGET /client/user-management/remove-user.html HTTP/1.1[0m" 404 -
+08/31 18:51:40 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:40] "[33mGET /client/user-management/remove-user.html HTTP/1.1[0m" 404 -
+08/31 18:51:45 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:45] "[35m[1mGET /client/user-management/remove-user HTTP/1.1[0m" 500 -
+08/31 18:51:45 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:45] "[37mGET /client/user-management/remove-user?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+08/31 18:51:45 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:45] "[37mGET /client/user-management/remove-user?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+08/31 18:51:45 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:45] "[37mGET /client/user-management/remove-user?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+08/31 18:51:46 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:46] "[37mGET /client/user-management/remove-user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+08/31 18:51:46 - INFO - 88.97.104.116 - - [31/Aug/2020 18:51:46] "[37mGET /client/user-management/remove-user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+08/31 18:58:15 - INFO - 88.97.104.116 - - [31/Aug/2020 18:58:15] "[37mGET / HTTP/1.1[0m" 200 -
