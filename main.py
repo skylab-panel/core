@@ -8,8 +8,12 @@ import logging
 import sys
 from flask_wtf import FlaskForm
 from wtforms import *
+from pprint import pprint, pformat
 from wtforms.validators import DataRequired
 import functools
+import socket
+import fqdn
+from nslookup import Nslookup
 ######################
 ### Main Variables ###
 ######################
@@ -31,16 +35,29 @@ try:
         password=lines[1].rstrip("\n"),
         host="localhost",
         port=3306,
+        autocommit=False
     )
 except mariadb.Error as e:
-    logging.critical(f"Main - Main Conection to Database Failed! {e}")
+    logging.critical(f"Database - Main Conection to Database Failed! {e}")
     sys.exit(1)
 except IndexError:
-    logging.critical("No Database Conection Creditals Provided in /skylabpanel/main.conf !")
+    logging.critical("Database - No Database Conection Creditals Provided in /skylabpanel/main.conf !")
 else:
     cur = conn.cursor()
-    logging.info("Main - Main Conection to Database Successful!")
+    #conn.autocommit=True
+    logging.info("Database - Main Conection to Database Successful!")
 
+############
+### FQDN ###
+############
+system_fqdn = fqdn.FQDN(socket.getfqdn())
+if system_fqdn.is_valid_relative == True:
+    fqdn_or_ip = socket.getfqdn()
+elif system_fqdn.is_valid_relative == False:
+    fqdn_or_ip = socket.gethostbyname(socket.gethostname())
+else:
+    logging.critical("Network - Failed to get Valid IP or FQDN")
+raise Exception('ValueError')
 #################
 ### Main Page ###
 #################
@@ -74,10 +91,9 @@ def login():
             db_username = row[0]
             db_password = row[1].encode('utf-8')
             db_account_type = row[2]
-        print (username, password)
-        print (db_username, db_password)
         if username == db_username and bcrypt.checkpw(password, db_password):
             session['username'] = username
+            session['password'] = password.decode("utf-8")
             session['account_type'] = db_account_type
             flash ("You are Logged in!", "info")
             return redirect(url_for('home_page'))
@@ -124,11 +140,15 @@ def user_managment_remove_user():
         cur.execute("SELECT username FROM tbl_users WHERE account_type != ?", ('admin', ))
         myresult = cur.fetchall()
         myresult = functools.reduce(lambda x,y: x+y, myresult)
-        users = SelectField('User Name', choices=myresult, validators=[DataRequired()], default='cpp')
+        users = SelectField('User Name', choices=myresult, validators=[DataRequired()])
         submit = SubmitField('Submit')
     form = myform()
     if form.is_submitted():
-        cur.execute("DELETE FROM tbl_users WHERE username = ?", (form.users.data, ))
+        print (form.users.data)
+        try:
+            cur.execute("DELETE FROM tbl_users WHERE username = ?", (f'"{form.users.data}"', ))
+        except mariadb.Error as e:
+            print(f"Error: {e}")
         flash('User: ' + form.users.data + ' Removed', 'info')
         return redirect(url_for('user_managment'))
     return render_template('/client/user-management/remove-user.html', form=form) 
@@ -255,6 +275,11 @@ def database_management():
         database = []
     return render_template('/client/database-management/databases.html', results=all_databases, num_records=num_records)
 
+@app.route('/phpmyadmin')
+def phpmyadmin():
+    print (socket.getfqdn())
+    return redirect("https://"+fqdn_or_ip+"/phpmyadmin")
+
 @app.route('/client/database-management/add-database' , methods=('GET', 'POST'))
 def database_management_add_database():
     class add_database_form(FlaskForm):
@@ -266,10 +291,15 @@ def database_management_add_database():
         print(db_name)
         cur.execute("CREATE DATABASE IF NOT EXISTS " + db_name)
         cur.execute("USE " + db_name)
-        cur.execute("GRANT ALL PRIVILEGES ON * TO " + session['username'] +"@'localhost' WITH GRANT OPTION;")
+        cur.execute("GRANT ALL PRIVILEGES ON *.* TO " + session['username'] + "@localhost IDENTIFIED BY " + pformat(session['password']))
         flash('Database: ' + db_name + ' Added', 'info')
         return redirect(url_for('database_management'))
     return render_template('/client/database-management/add-database.html', form=form)
+
+######################
+### Error Handling ###
+######################
+
 ###########
 ### Run ###
 ###########

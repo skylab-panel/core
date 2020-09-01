@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    {% block title %} Database Management {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <table class="table table-striped" style="width: 100%;">
+        <thead>
+            <tr>
+                <th> Database </th>
+                <th> Host </th>
+                <th> database </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for result in results %}
+            <tr>
+            {% for elem in result %}
+                <td>{{ elem }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/client/database-management/add-database" class="btn btn-default" role="button"> Add Databases </a>
+    <a href="/client/database-management/edit-database" class="btn btn-default" role="button"> Edit Databases </a>
+    <a href="/client/database-management/remove-database" class="btn btn-default" role="button"> Remove Databases</a>
+    <a href="/phpmyadmin" class="btn btn-default" role="button"> phpmyadmin</a>
+    {% endblock %}
+</body>
+</html>

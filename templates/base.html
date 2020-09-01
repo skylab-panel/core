@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8bdf9f2382.js" crossorigin="anonymous"></script>
+    <title> {% block title %}{% endblock %} </title>
 </head>
 
 <!-- Top Nav Bar -->
@@ -59,7 +60,7 @@
                     </li>
                     <li class="nav-item-sidebar"><a href="#" class="nav-link-sidebar"> <i class="fas fa-at"></i>          Domain Managment    </a>
                     </li>
-                    <li class="nav-item-sidebar"><a href="#" class="nav-link-sidebar"> <i class="fas fa-database"></i>    Database Managment  </a>
+                    <li class="nav-item-sidebar"><a href="/client/database-management/databases" class="nav-link-sidebar"> <i class="fas fa-database"></i>    Database Managment  </a>
                     </li>
                     <li class="nav-item-sidebar"><a href="#" class="nav-link-sidebar"> <i class="fas fa-inbox"></i>       Email Managment     </a>
                     </li>
