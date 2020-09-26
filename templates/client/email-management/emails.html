@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    <title> Email Management</title>
+</head>
+<body>
+    {% block body %}
+    <table class="table table-striped" style="width: 100%;">
+        <thead>
+            <tr>
+                <th> Address </th>
+                <th> Domain </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for result in results %}
+            <tr>
+            {% for elem in result %}
+                <td>{{ elem }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/iredadmin" class="btn btn-default" role="button"> Manage Email </a>
+    <a href="/mail" class="btn btn-default" role="button"> Web Mail </a>
+    {% endblock %}
+</body>
+</html>

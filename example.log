@@ -642,3 +642,139 @@
 09/01 12:04:25 - INFO - Database - Main Conection to Database Successful!
 09/01 12:06:31 - INFO - Database - Main Conection to Database Successful!
 09/01 12:06:38 - INFO - Database - Main Conection to Database Successful!
+09/26 11:25:02 - INFO - Database - Main Conection to Database Successful!
+09/26 11:25:59 - INFO - Database - Main Conection to Database Successful!
+09/26 11:25:59 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+09/26 11:25:59 - INFO -  * Restarting with stat
+09/26 11:26:00 - INFO - Database - Main Conection to Database Successful!
+09/26 11:26:00 - WARNING -  * Debugger is active!
+09/26 11:26:00 - INFO -  * Debugger PIN: 691-480-435
+09/26 11:26:14 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:14] "[37mGET / HTTP/1.1[0m" 200 -
+09/26 11:26:14 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:14] "[37mGET /static/css/base.css HTTP/1.1[0m" 200 -
+09/26 11:26:15 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+09/26 11:26:21 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+09/26 11:26:21 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:21] "[37mGET / HTTP/1.1[0m" 200 -
+09/26 11:26:22 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+09/26 11:26:31 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:31] "[35m[1mGET /client/database-management/databases HTTP/1.1[0m" 500 -
+09/26 11:26:31 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:31] "[37mGET /client/database-management/databases?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+09/26 11:26:31 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:31] "[37mGET /client/database-management/databases?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+09/26 11:26:31 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:31] "[37mGET /client/database-management/databases?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+09/26 11:26:31 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:31] "[37mGET /client/database-management/databases?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 11:26:31 - INFO - 88.97.104.116 - - [26/Sep/2020 11:26:31] "[37mGET /client/database-management/databases?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 11:30:02 - INFO - Database - Main Conection to Database Successful!
+09/26 11:30:02 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+09/26 11:30:02 - INFO -  * Restarting with stat
+09/26 11:30:02 - INFO - Database - Main Conection to Database Successful!
+09/26 11:30:02 - WARNING -  * Debugger is active!
+09/26 11:30:02 - INFO -  * Debugger PIN: 691-480-435
+09/26 11:30:05 - INFO - 88.97.104.116 - - [26/Sep/2020 11:30:05] "[37mGET / HTTP/1.1[0m" 200 -
+09/26 11:30:08 - INFO - 88.97.104.116 - - [26/Sep/2020 11:30:08] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 11:30:18 - INFO - 88.97.104.116 - - [26/Sep/2020 11:30:18] "[32mGET /phpmyadmin HTTP/1.1[0m" 302 -
+09/26 15:39:44 - INFO - Database - Main Conection to Database Successful!
+09/26 15:39:44 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+09/26 15:39:44 - INFO -  * Restarting with stat
+09/26 15:39:45 - INFO - Database - Main Conection to Database Successful!
+09/26 15:39:45 - WARNING -  * Debugger is active!
+09/26 15:39:45 - INFO -  * Debugger PIN: 691-480-435
+09/26 15:39:48 - INFO - 88.97.104.116 - - [26/Sep/2020 15:39:48] "[37mGET / HTTP/1.1[0m" 200 -
+09/26 15:39:57 - INFO - 88.97.104.116 - - [26/Sep/2020 15:39:57] "[37mGET /client/user-management/users HTTP/1.1[0m" 200 -
+09/26 15:39:59 - INFO - 88.97.104.116 - - [26/Sep/2020 15:39:59] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 16:22:40 - INFO - Database - Main Conection to Database Successful!
+09/26 16:22:40 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+09/26 16:22:40 - INFO -  * Restarting with stat
+09/26 16:22:41 - INFO - Database - Main Conection to Database Successful!
+09/26 16:22:41 - WARNING -  * Debugger is active!
+09/26 16:22:41 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:22:53 - ERROR - 88.97.104.116 - - [26/Sep/2020 16:22:53] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x00\x00\x18\x00\x16\x00\x00\x13test.bxdavies.co.uk\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+09/26 16:22:53 - INFO - 88.97.104.116 - - [26/Sep/2020 16:22:53] "[35m[1m  ü!,Ú\jXÕnßúD íù­(ÝWéT+Õ^]%o 	×ÿ©>¿ýÎÞÈÀ9ÁÃXuYµM'=ESÞ  À+À/À,À0Ì©Ì¨ÀÀ   / 5         test.bxdavies.co.uk   ÿ   [0m" HTTPStatus.BAD_REQUEST -
+09/26 16:22:53 - ERROR - 88.97.104.116 - - [26/Sep/2020 16:22:53] code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x00\x00\x18\x00\x16\x00\x00\x13test.bxdavies.co.uk\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+09/26 16:22:53 - INFO - 88.97.104.116 - - [26/Sep/2020 16:22:53] "[35m[1m  üî AnS<DÞ¦Æ¦s³|óONh»àªh~Ã <gDÒY}\o½WÅcÁJ¯äÙ!ïÚ:   À+À/À,À0Ì©Ì¨ÀÀ   / 5 êê        test.bxdavies.co.uk   ÿ   [0m" HTTPStatus.BAD_REQUEST -
+09/26 16:22:53 - ERROR - 88.97.104.116 - - [26/Sep/2020 16:22:53] code 400, message Bad request version ('ê2Õ2\x18qìzw|\x17ÉeõDVþ|ûqO\x07Ô~ÿ¢öÛÜÁx»\x00"JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+09/26 16:22:53 - INFO - 88.97.104.116 - - [26/Sep/2020 16:22:53] "[35m[1m  ü±}Tjìøô}ùø¨6³0ÍK¥µUÌ|Èð ê2Õ2qìzw|ÉeõDVþ|ûqOÔ~ÿ¢öÛÜÁx» "JJÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 [0m" HTTPStatus.BAD_REQUEST -
+09/26 16:22:53 - ERROR - 88.97.104.116 - - [26/Sep/2020 16:22:53] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03B\x82¨\x07*^\x8añ')
+09/26 16:22:53 - INFO - 88.97.104.116 - - [26/Sep/2020 16:22:53] "[35m[1m  üB¨*^ñÖê³hô!yÌEçO[0m" HTTPStatus.BAD_REQUEST -
+09/26 16:23:02 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:02] "[37mGET / HTTP/1.1[0m" 200 -
+09/26 16:23:36 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:36] "[35m[1mGET /client/email-management/emails HTTP/1.1[0m" 500 -
+09/26 16:23:37 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:37] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+09/26 16:23:37 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:37] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+09/26 16:23:37 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:37] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+09/26 16:23:37 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:37] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 16:23:37 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:37] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 16:23:54 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:23:54 - INFO -  * Restarting with stat
+09/26 16:23:54 - INFO - Database - Main Conection to Database Successful!
+09/26 16:23:54 - WARNING -  * Debugger is active!
+09/26 16:23:54 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:23:57 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:57] "[35m[1mGET /client/email-management/emails HTTP/1.1[0m" 500 -
+09/26 16:23:57 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:57] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+09/26 16:23:57 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:57] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+09/26 16:23:57 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:57] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+09/26 16:23:58 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:58] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 16:23:58 - INFO - 88.97.104.116 - - [26/Sep/2020 16:23:58] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 16:24:00 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:00] "[35m[1mGET /client/email-management/emails HTTP/1.1[0m" 500 -
+09/26 16:24:00 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:00] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+09/26 16:24:00 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:00] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+09/26 16:24:00 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:00] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+09/26 16:24:00 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:00] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 16:24:00 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:00] "[37mGET /client/email-management/emails?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+09/26 16:24:20 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:24:20 - INFO -  * Restarting with stat
+09/26 16:24:21 - INFO - Database - Main Conection to Database Successful!
+09/26 16:24:21 - WARNING -  * Debugger is active!
+09/26 16:24:21 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:24:24 - INFO - 88.97.104.116 - - [26/Sep/2020 16:24:24] "[37mGET /client/email-management/emails HTTP/1.1[0m" 200 -
+09/26 16:25:16 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:16] "[37mGET /client/email-management/emails HTTP/1.1[0m" 200 -
+09/26 16:25:17 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:17] "[37mGET /client/email-management/emails HTTP/1.1[0m" 200 -
+09/26 16:25:19 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:19] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 16:25:29 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:29] "[37mGET /client/user-management/users HTTP/1.1[0m" 200 -
+09/26 16:25:34 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:34] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 16:25:35 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:35] "[37mGET /client/email-management/emails HTTP/1.1[0m" 200 -
+09/26 16:25:45 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:45] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 16:25:47 - INFO - 88.97.104.116 - - [26/Sep/2020 16:25:47] "[32mGET /phpmyadmin HTTP/1.1[0m" 302 -
+09/26 16:25:59 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:25:59 - INFO -  * Restarting with stat
+09/26 16:25:59 - INFO - Database - Main Conection to Database Successful!
+09/26 16:25:59 - WARNING -  * Debugger is active!
+09/26 16:25:59 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:26:01 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:26:01 - INFO -  * Restarting with stat
+09/26 16:26:02 - INFO - Database - Main Conection to Database Successful!
+09/26 16:26:02 - WARNING -  * Debugger is active!
+09/26 16:26:02 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:26:05 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:26:05 - INFO -  * Restarting with stat
+09/26 16:26:05 - INFO - Database - Main Conection to Database Successful!
+09/26 16:26:05 - WARNING -  * Debugger is active!
+09/26 16:26:05 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:26:07 - INFO - 88.97.104.116 - - [26/Sep/2020 16:26:07] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 16:26:09 - INFO - 88.97.104.116 - - [26/Sep/2020 16:26:09] "[37mGET /client/database-management/databases HTTP/1.1[0m" 200 -
+09/26 16:26:10 - INFO - 88.97.104.116 - - [26/Sep/2020 16:26:10] "[32mGET /phpmyadmin HTTP/1.1[0m" 302 -
+09/26 16:26:39 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:26:39 - INFO -  * Restarting with stat
+09/26 16:26:39 - INFO - Database - Main Conection to Database Successful!
+09/26 16:26:39 - WARNING -  * Debugger is active!
+09/26 16:26:39 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:27:07 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:27:07 - INFO -  * Restarting with stat
+09/26 16:27:08 - INFO - Database - Main Conection to Database Successful!
+09/26 16:28:38 - INFO - Database - Main Conection to Database Successful!
+09/26 16:28:38 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+09/26 16:28:38 - INFO -  * Restarting with stat
+09/26 16:28:39 - INFO - Database - Main Conection to Database Successful!
+09/26 16:28:39 - WARNING -  * Debugger is active!
+09/26 16:28:39 - INFO -  * Debugger PIN: 155-516-123
+09/26 16:28:42 - INFO - 88.97.104.116 - - [26/Sep/2020 16:28:42] "[37mGET /client/email-management/emails HTTP/1.1[0m" 200 -
+09/26 16:28:50 - INFO - 88.97.104.116 - - [26/Sep/2020 16:28:50] "[32mGET /iredadmin HTTP/1.1[0m" 302 -
+09/26 16:28:53 - INFO - 88.97.104.116 - - [26/Sep/2020 16:28:53] "[32mGET /mail HTTP/1.1[0m" 302 -
+09/26 16:28:57 - INFO - 88.97.104.116 - - [26/Sep/2020 16:28:57] "[32mGET /iredadmin HTTP/1.1[0m" 302 -
+09/26 16:35:17 - INFO -  * Detected change in '/root/core/main.py', reloading
+09/26 16:35:17 - INFO -  * Restarting with stat
+09/26 16:35:18 - INFO - Database - Main Conection to Database Successful!
+09/26 17:24:17 - INFO - Database - Main Conection to Database Successful!
+09/26 17:24:43 - INFO - Database - Main Conection to Database Successful!
+09/26 17:24:43 - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+09/26 17:24:43 - INFO -  * Restarting with stat
+09/26 17:24:44 - INFO - Database - Main Conection to Database Successful!
+09/26 17:24:44 - WARNING -  * Debugger is active!
+09/26 17:24:44 - INFO -  * Debugger PIN: 155-516-123
+09/26 17:24:49 - INFO - 88.97.104.116 - - [26/Sep/2020 17:24:49] "[37mGET /client/email-management/emails HTTP/1.1[0m" 200 -

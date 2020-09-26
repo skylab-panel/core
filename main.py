@@ -57,7 +57,6 @@ elif system_fqdn.is_valid_relative == False:
     fqdn_or_ip = socket.gethostbyname(socket.gethostname())
 else:
     logging.critical("Network - Failed to get Valid IP or FQDN")
-raise Exception('ValueError')
 #################
 ### Main Page ###
 #################
@@ -277,8 +276,7 @@ def database_management():
 
 @app.route('/phpmyadmin')
 def phpmyadmin():
-    print (socket.getfqdn())
-    return redirect("https://"+fqdn_or_ip+"/phpmyadmin")
+    return redirect("http://"+fqdn_or_ip+":8080/phpmyadmin")
 
 @app.route('/client/database-management/add-database' , methods=('GET', 'POST'))
 def database_management_add_database():
@@ -296,6 +294,29 @@ def database_management_add_database():
         return redirect(url_for('database_management'))
     return render_template('/client/database-management/add-database.html', form=form)
 
+##############
+### Email ####
+##############
+@app.route('/client/email-management/emails')
+def email_management():
+    cur.execute("USE vmail")
+    cur.execute("SELECT address, domain FROM forwardings GROUP BY domain")
+    myresult = cur.fetchall()
+    num_records = len(myresult)
+    email_accounts = []
+    for row in myresult:
+        email_account = [row[0], row[1]]
+        email_accounts.append(email_account)
+        email_account = []
+    return render_template('/client/email-management/emails.html', results=email_accounts, num_records=num_records)
+
+@app.route('/mail')
+def webmail():
+    return redirect("http://"+fqdn_or_ip+"/mail")
+
+@app.route('/iredadmin')
+def iredadmin():
+    return redirect("http://"+fqdn_or_ip+"/iredadmin")
 ######################
 ### Error Handling ###
 ######################
